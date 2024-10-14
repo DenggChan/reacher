@@ -1,0 +1,204 @@
+@font-face {
+    font-family: 'One Trick Pony';
+    src: url('../fonts/OneTrickPony.ttf') format('truetype'); /* Adjust the path here */
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary: #FE81B9;
+    --secondary: #20b4bc;
+
+    --bgl: #FFFFFF;
+    --bgh: #1F1F1F;
+}
+
+.navbar {
+    background: var(--bgl);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+  .navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    max-width: 1500px;
+  }
+  
+  .navbar-logo {
+    color: var(--bgl);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align the logo and text to the left */
+    margin-left: 10px;
+  }
+  
+  .navbar-logo img {
+    width: 30px;  
+    height: 30px; 
+  }
+
+
+.logo-text {
+    font-family: 'One Trick Pony', sans-serif; /* Apply the font */
+    font-size: 2rem;
+    margin-left: 10px;
+    color: var(--primary);
+}
+
+body {
+    font-family: sans-serif;
+}
+
+  .nav-menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 60vw;
+    justify-content: end;
+    margin-right: 2rem;
+  }
+  
+  .nav-item {
+    height: 80px;
+  }
+  
+  .nav-links {    /* Menu options */
+    color: #242424;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+  }
+  
+  .nav-links:hover {
+    border-bottom: 4px solid var(--secondary);
+    transition: all 0.2s ease-out;
+  }
+  
+  .fa-bars {
+    color: var(--secondary);
+  }
+  
+  .nav-links-mobile {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media screen and (max-width: 960px) {
+    .NavbarItems {
+      position: relative;
+    }
+  
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 60vh;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+  
+    .nav-menu.active {
+      background: var(--secondary);
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+     
+    }
+  
+    .nav-links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+      color: var(--bgl);
+      font-weight: 500;
+
+    }
+  
+    .nav-links:hover {
+      background-color: var(--bgl);
+      color: var(--primary);
+      border-radius: 0;
+      font-weight: 500;
+    }
+  
+    .navbar-logo img {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .logo-text {
+      font-size: 1.5rem; 
+    }
+  
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 60%);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+  
+    .fa-times {
+      color: var(--secondary);
+      font-size: 2rem;
+    }
+    
+    .nav-links-mobile a {
+        text-decoration: none; /* Removes underline */
+        color: inherit; /* Inherits color from parent, or set it explicitly */
+      }
+      
+      .nav-links-mobile a:hover {
+        color: var(--primary); /* Set a hover color, if needed */
+      }
+      
+  
+    .nav-links-mobile {
+      display: block;
+      text-align: center;
+      margin: 2rem auto;
+      border-radius: 4px;
+      width: 80%;
+      text-decoration: none;
+      font-size: 1.5rem;
+      background-color: var(--primary);
+      color: var(--bgl);
+      padding: 14px 20px;
+      border:var(--primary);
+      transition: all 0.3s ease-out;
+      font-weight: 500;
+    }
+  
+    .nav-links-mobile:hover {
+      background: var(--bgl);
+      color: var(--secondary);
+      transition: 250ms;
+    }
+  }
+  
+  

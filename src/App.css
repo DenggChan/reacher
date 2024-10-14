@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif; /* Sans-serif for other texts */
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .home,
+  .about-us,
+  .faqs,
+  .login {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #fff; /* White text for better contrast on colored backgrounds */
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* Use the specified color instead of background images */
+  .about-us {
+    background-color: #86d9d2; /* Change to the specified color */
+    color: #fff;
+    font-size: 100px;
   }
-}
+  
+  .faqs {
+    background-color: #86d9d2; /* Change to the specified color */
+    color: #fff;
+    font-size: 100px;
+  }
+  
+  .login {
+    background-color: #86d9d2; /* Change to the specified color */
+    color: #fff;
+    font-size: 100px;
+  }
+  
+  /* Style for logo text */
+  .logo-text {
+    font-family: 'One Trick Pony', sans-serif; /* Use One Trick Pony font for logo text */
+    font-size: 2.5rem; /* Adjust size as needed */
+    color: #fff; /* Change logo text color to white */
+  }
+  
